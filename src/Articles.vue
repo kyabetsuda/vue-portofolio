@@ -33,9 +33,9 @@ export default {
   mounted() {
     this.page = 1;
     var categoryId = this.$route.params.value;
-    var url = 'http://test.local/wp-json/wp/v2/posts?_embed';
+    var url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/posts?_embed';
     if (categoryId != undefined) {
-      url = 'http://test.local/wp-json/wp/v2/posts?categories=' + this.$route.params.value + '&_embed';
+      url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/posts?categories=' + this.$route.params.value + '&_embed';
     }
     (async () => {  
       try {

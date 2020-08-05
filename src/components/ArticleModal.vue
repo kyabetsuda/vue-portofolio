@@ -45,7 +45,7 @@ export default {
   mounted() {
     this.page = 1;
     const postId = this.$props.postId;
-    const url = 'http://test.local/wp-json/wp/v2/posts/' + postId + '?_embed';
+    const url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/posts/' + postId + '?_embed';
     (async () => {
       try {
         const res = await axios.get(url);

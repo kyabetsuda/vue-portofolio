@@ -33,7 +33,7 @@ export default {
       }
   },
   mounted() {
-    const url = 'http://test.local/wp-json/wp/v2/categories';
+    const url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/categories';
     (async () => {
       try {
         const res = await axios.get(url);
