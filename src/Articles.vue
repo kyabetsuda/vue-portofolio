@@ -21,6 +21,7 @@
 <script>
 import axios from 'axios';
 import ArticleModal from './components/ArticleModal.vue'
+import states from "./assets/property.json";
 export default {
   name: 'Articles',
   components: { ArticleModal },
@@ -33,9 +34,9 @@ export default {
   mounted() {
     this.page = 1;
     var categoryId = this.$route.params.value;
-    var url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/posts?_embed';
+    var url = states.hostname + states.postsUrl;
     if (categoryId != undefined) {
-      url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/posts?categories=' + this.$route.params.value + '&_embed';
+      url = states.hostname + states.categoryUrl + this.$route.params.value + '&_embed';
     }
     (async () => {  
       try {

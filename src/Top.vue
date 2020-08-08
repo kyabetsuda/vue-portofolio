@@ -25,6 +25,7 @@
 
 <script>
 import axios from 'axios';
+import states from "./assets/property.json";
 export default {
   name: 'Top',
   data() {
@@ -33,7 +34,7 @@ export default {
       }
   },
   mounted() {
-    const url = 'https://damp-spire-26355.herokuapp.com/wp-json/wp/v2/categories';
+    const url = states.hostname + states.categoriesUrl;
     (async () => {
       try {
         const res = await axios.get(url);
