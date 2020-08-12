@@ -4,10 +4,12 @@ import Router from 'vue-router'
 import Top from './Top.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
+// Router
 Vue.use(Router)
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
+
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
@@ -35,4 +37,6 @@ new Vue({
   render: h => h(Top),
   router
 }).$mount('#app')
+
+
 

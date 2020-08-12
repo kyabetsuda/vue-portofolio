@@ -1,26 +1,28 @@
 <template>
   <div id="app">
-    <div class="album py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-4" v-for="post in posts" :key="post.title.rendered">
-            <div class="card h-100 p-2 shadow-sm">
-              <img class="card-img-top" :src="post._embedded['wp:featuredmedia'][0].source_url" alt="" id="show-modal" @click="openModal(event, post.id)">
-              <ArticleModal v-if="showModal && showId == post.id" :postId="post.id" @close="showModal = false"></ArticleModal>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <transition name="fade">
+      <div v-if="ok" class="album py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4" v-for="post in posts" :key="post.title.rendered">
+              <div class="card h-100 p-2 shadow-sm">
+                <img class="card-img-top" :src="post._embedded['wp:featuredmedia'][0].source_url" alt="" id="show-modal" @click="openModal(event, post.id)">
+                <ArticleModal v-if="showModal && showId == post.id" :postId="post.id" @close="showModal = false"></ArticleModal>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
-import ArticleModal from './components/ArticleModal.vue'
+import ArticleModal from './components/ArticleModal.vue';
 import states from "./assets/property.json";
 export default {
   name: 'Articles',
@@ -29,6 +31,7 @@ export default {
       return {
         posts: [],
         showModal: false,
+        ok: false
       }
   },
   mounted() {
@@ -43,6 +46,7 @@ export default {
         const res = await axios.get(url);
         this.posts = this.posts.concat(res.data);
         this.loading = false;
+        this.ok = true;
       } catch (error) {
         console.log(error);
         this.empty();
@@ -61,4 +65,10 @@ export default {
 </script>
 
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
