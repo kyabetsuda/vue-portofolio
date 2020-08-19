@@ -9,7 +9,7 @@
                 <img class="card-img-top" :src="post._embedded['wp:featuredmedia'][0].source_url" alt="" id="show-modal" @click="openModal(event, post.id)">
                 <ArticleModal v-if="showModal && showId == post.id" :postId="post.id" @close="showModal = false"></ArticleModal>
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
                 </div>
               </div>
             </div>
