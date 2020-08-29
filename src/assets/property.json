@@ -1,5 +1,5 @@
 {
-    "hostname":"https://damp-spire-26355.herokuapp.com/",
+    "hostname":"https://tsudawork-for-posts.herokuapp.com/",
     "postUrl":"wp-json/wp/v2/posts/",
     "postsUrl":"wp-json/wp/v2/posts?_embed",
     "categoryUrl":"wp-json/wp/v2/posts?categories=",
