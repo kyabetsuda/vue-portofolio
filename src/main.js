@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Articles from './Articles.vue'
+import Article from './Article.vue'
 import Router from 'vue-router'
 import Top from './Top.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
@@ -27,6 +28,11 @@ const router = new Router({
       path: '/category/:value',
       name: 'category',
       component: Articles
+    },
+    {
+      path: '/post/:value',
+      name: 'post',
+      component: Article
     }
   ]
 })
