@@ -6,12 +6,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4 mb-4" v-for="post in posts" :key="post.title.rendered">
-              <div class="card h-100 p-2 shadow-sm">
-                <div class="card-body">
-                  <router-link class="nav-link" :to="{name:'post', params:{value:post.id}}">
+              <div class="card h-100 shadow-sm">
+                <router-link class="nav-link" :to="{name:'post', params:{value:post.id}}">
                     <img class="card-img-top" :src="post._embedded['wp:featuredmedia'][0].source_url" alt="">
-                  </router-link>
-                </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -58,9 +56,16 @@ export default {
 </script>
 
 <style>
+.card {
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center; /*上下中央揃え*/
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s;
 }
+
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }

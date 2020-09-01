@@ -1,4 +1,9 @@
 
+.card {
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center; /*上下中央揃え*/
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s;
 }
@@ -7,11 +12,35 @@
 }
 
 
-.fade-enter-active, .fade-leave-active {
+.articleContainer {
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center; /*上下中央揃え*/
+  width: 100%;
+}
+.article > .title {
+  text-align: center;
+}
+.article {
+  width: 50%;
+}
+.article img {
+  width: 100%;
+}
+
+/* フェードインの設定 */
+.fade-enter-active
+/* , .fade-leave-active */
+{
   transition: opacity 2s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter
+/* , .fade-leave-to */
+{
   opacity: 0;
+}
+.fade-leave-active {
+  display:none;
 }
 
 
@@ -19,6 +48,7 @@
   display: flex;
   flex-direction: column;
   min-height: 82vh;
+  font-family: "Yu Gothic","Yu Gothic UI","Meiryo UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif;
 }
 .navbar {
   background-color:rgba(0, 0, 0, 0);

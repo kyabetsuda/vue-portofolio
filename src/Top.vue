@@ -56,6 +56,7 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 82vh;
+  font-family: "Yu Gothic","Yu Gothic UI","Meiryo UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif; 
 }
 .navbar {
   background-color:rgba(0, 0, 0, 0);
