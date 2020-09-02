@@ -21,11 +21,18 @@
 .article > .title {
   text-align: center;
 }
-.article {
-  width: 50%;
-}
 .article img {
   width: 100%;
+}
+@media screen and (min-width: 800px){
+.article{
+		width:60%;
+}
+}
+@media screen and (max-width: 799px){
+.article{
+		width:85%;
+}
 }
 
 /* フェードインの設定 */
@@ -42,6 +49,7 @@
 .fade-leave-active {
   display:none;
 }
+
 
 
 #app {

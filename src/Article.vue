@@ -4,7 +4,7 @@
       <div class="row">
         <div class="articleContainer">
           <div class="article">
-            <h2 class="title">{{post.title.rendered}}</h2> 
+            <h3 class="title">{{post.title.rendered}}</h3> 
             <div class="content" v-html="post.content.rendered">
             </div>
           </div>
@@ -60,12 +60,20 @@ export default {
   text-align: center;
 }
 
-.article {
-  width: 50%;
-}
-
 .article img {
   width: 100%;
+}
+
+@media screen and (min-width: 800px){
+	.article{
+		width:60%;
+	}
+}
+
+@media screen and (max-width: 799px){
+	.article{
+		width:85%;
+	}
 }
 
 /* フェードインの設定 */
@@ -82,4 +90,5 @@ export default {
 .fade-leave-active {
   display:none;
 }
+
 </style>
