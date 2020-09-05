@@ -55,6 +55,7 @@ export default {
           const resForSubCategories = await axios.get(url + "?parent=" + categoryTmp.id);
           var subCategoriesTmp = [];
           subCategoriesTmp = subCategoriesTmp.concat(resForSubCategories.data);
+          
           for (var subCategoryTmp of subCategoriesTmp) {
             // サブカテゴリー作成
             var subCategory = {};
