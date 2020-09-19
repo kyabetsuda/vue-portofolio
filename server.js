@@ -8,7 +8,7 @@ app.use(history({
     rewrites: [
       { from: /^\/category\/.*$/, to: '/soccer.html'}
     ]
-  }););
+  }));
 app.use(serveStatic(__dirname + "/dist"));
 var port = process.env.PORT || 5000;
 app.listen(port);
