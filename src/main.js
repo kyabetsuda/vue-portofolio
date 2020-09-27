@@ -4,7 +4,8 @@ import Article from './Article.vue'
 import Router from 'vue-router'
 import Top from './Top.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Router
 Vue.use(Router)
@@ -15,8 +16,6 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const router = new Router({
   mode:'history',

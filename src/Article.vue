@@ -41,13 +41,6 @@ export default {
       }
     })();
   },
-  watch: {
-  },
-  methods: {
-    reload() {
-        this.$router.go({path: this.$router.currentRoute.path, force: true});
-    }
-  },
 }
 </script>
 

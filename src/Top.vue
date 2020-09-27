@@ -37,8 +37,7 @@ export default {
       try {
         // カテゴリー取得
         const res = await axios.get(url);
-        var categoriesTmp = [];
-        categoriesTmp = categoriesTmp.concat(res.data);
+        var categoriesTmp = [].concat(res.data);
         for (var categoryTmp of categoriesTmp) {
           // サブカテゴリ―の場合は処理をスキップ
           if (categoryTmp.parent > 0) {
@@ -53,8 +52,7 @@ export default {
 
           // サブカテゴリー取得
           const resForSubCategories = await axios.get(url + "?parent=" + categoryTmp.id);
-          var subCategoriesTmp = [];
-          subCategoriesTmp = subCategoriesTmp.concat(resForSubCategories.data);
+          var subCategoriesTmp = [].concat(resForSubCategories.data);
           
           for (var subCategoryTmp of subCategoriesTmp) {
             // サブカテゴリー作成
@@ -72,10 +70,6 @@ export default {
         console.log(error);
       }
     })();
-  },
-  watch: {
-  },
-  methods: {
   },
 }
 </script>
