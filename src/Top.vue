@@ -99,7 +99,12 @@ export default {
 }
 @media screen and (orientation:landscape) {
   .article-router {
-    margin-top:10vw;
+    margin-top:7vw;
+  }
+  @media screen and (max-width: 800px){
+    .article-router{
+      margin-top:9vw;
+    }
   }
 }
 </style>
