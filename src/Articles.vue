@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade">
       <!-- フェードイン実装のためv-ifは必要 -->
-      <div v-if="ok" class="album py-3">
+      <div v-if="ok" class="album">
         <div class="container">
           <div class="row">
             <div class="col-md-4 mb-4" v-for="post in posts" :key="post.title.rendered">

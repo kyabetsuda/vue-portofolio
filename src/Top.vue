@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar class="navbar" toggleable="lg">
+    <b-navbar class="navbar bg-white" fixed="top" toggleable="lg">
       <b-navbar-brand href="/">Tsuda Work</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
@@ -12,9 +12,14 @@
               </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item class="nav-item" href="https://twitter.com/tsuda215">
+            <div>Twitter</div>
+          </b-nav-item>   
+        </b-navbar-nav>
       </b-collapse>
     </b-navbar> 
-    <router-view :key="$route.path"></router-view>
+    <router-view class="article-router" :key="$route.path"></router-view>
     <footer class="page-footer font-small blue pt-4">
       <div class="footer-copyright text-center py-3">© 2019-2020 Tsuda Work.</div>
     </footer>
@@ -86,5 +91,15 @@ export default {
 }
 .page-footer {
   margin-bottom:0;  
+}
+@media screen and (orientation:portrait) {
+  .article-router {
+    margin-top:10vh;
+  }
+}
+@media screen and (orientation:landscape) {
+  .article-router {
+    margin-top:10vw;
+  }
 }
 </style>

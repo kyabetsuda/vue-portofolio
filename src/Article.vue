@@ -32,8 +32,7 @@ export default {
     (async () => {
       try {
         const res = await axios.get(url);
-        var posts = [];
-        this.post = posts.concat(res.data)[0];
+        this.post = res.data;
         // マウント時にok=trueを実施
         this.ok = true;
       } catch (error) {
