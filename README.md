@@ -7,7 +7,7 @@
 [Vue + Wordpress + Heroku + S3でポートフォリオを構築する](https://qiita.com/kyabetsuda/items/d339bbbaebcc8d9a91f0)
 
 # イメージ
-![image](image/image1.JPG)
+![image](image/image1.jpg)
 
 # 技術スタック
 - Vue.js : @vue/cli 4.5.6
