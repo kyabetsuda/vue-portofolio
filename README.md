@@ -1,4 +1,15 @@
-# vue
+# vue-portfolio
+
+# 概要
+- 写真を投稿するためのポートフォリオサイトを構築しました。
+- 製作期間は約2か月です。
+
+# イメージ
+
+
+
+
+# how to run the app
 
 ## Project setup
 ```
