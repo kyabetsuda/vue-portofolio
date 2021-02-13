@@ -1,5 +1,8 @@
 # vue-portfolio
 
+# アクセス先
+http://tsudawork.herokuapp.com/
+
 # 概要
 - 写真を投稿するためのポートフォリオサイトを構築しました。
 - 製作期間は約2か月です。
